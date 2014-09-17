@@ -6967,7 +6967,7 @@ let setup_t =
                       bs_data_files = [];
                       bs_ccopt =
                         [
-                           (OASISExpr.EBool true, ["-I${pkg_ctypes}/.."]);
+                           (OASISExpr.EBool true, ["-I${pkg_ctypes}/.."; "-DNDEBUG"]);
                            (OASISExpr.EFlag "pedantic",
                              ["-Wall"; "-Wpedantic"])
                         ];

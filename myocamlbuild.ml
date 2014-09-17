@@ -613,7 +613,7 @@ let package_default =
        [
           (["oasis_library_nocrypto_ccopt"; "compile"],
             [
-               (OASISExpr.EBool true, S [A "-ccopt"; A "-I${pkg_ctypes}/.."]);
+               (OASISExpr.EBool true, S [A "-ccopt"; A "-I${pkg_ctypes}/.."; A "-ccopt"; A "-DNDEBUG"]);
                (OASISExpr.EFlag "pedantic",
                  S [A "-ccopt"; A "-Wall"; A "-ccopt"; A "-Wpedantic"])
             ]);
